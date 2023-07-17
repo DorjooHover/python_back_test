@@ -13,7 +13,7 @@ RUN python -m venv venv
 SHELL ["cmd", "/S", "/C", "venv\\Scripts\\activate.bat"]
 
 # Install the project dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the entire project directory to the working directory
 COPY . .
