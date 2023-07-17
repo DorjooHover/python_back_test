@@ -1,10 +1,21 @@
 FROM python:3.9
 
+# Set the working directory in the container
 WORKDIR /app
 
-COPY . /app
+# Copy the requirements file to the working directory
+COPY requirements.txt .
 
-RUN pip install -r requirements.txt
+# Create a virtual environment
+RUN python -m venv venv
+
+# Activate the virtual environment
+SHELL ["cmd", "/S", "/C", "venv\\Scripts\\activate.bat"]
+
+# Install the project dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the entire project directory to the working directory
 COPY . .
 
 # Set the command to run your Python application with Uvicorn
