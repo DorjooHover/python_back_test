@@ -4,7 +4,7 @@ FROM python:3.9
 WORKDIR /app
 
 # Copy the requirements file to the working directory
-COPY requirements.txt .
+
 
 # Create a virtual environment
 RUN python -m venv venv
