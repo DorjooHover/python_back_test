@@ -1,3 +1,7 @@
-pymongo
+starlette
 uvicorn
 fastapi
+pydantic
+python-multipart
+aiofiles
+Jinja2
